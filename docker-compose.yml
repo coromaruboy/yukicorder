@@ -1,0 +1,10 @@
+version: '3.9'
+services:
+  python3:
+    restart: always
+    build: .
+    container_name: 'python'
+    working_dir: '/root/backend'
+    tty: true
+    volumes:
+      - ${BACKEND_PATH}:/root/python_app
